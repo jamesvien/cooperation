@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/layout1">
+
+    <LinearLayout
+        android:id="@+id/language"
+		android:orientation="horizontal"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+    
+        <Button 
+            android:id="@+id/button_en"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:text="@string/lang_english"
+            android:onClick="translateToEnglish"/>
+            
+        <Button 
+            android:id="@+id/button_fr"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:text="@string/lang_french"
+            android:onClick="translateToFrench"/>
+        
+    </LinearLayout>
+    
+    <TextView
+        android:id="@+id/text"
+        android:layout_below="@id/language"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world"
+        android:textSize="50sp"
+        android:paddingLeft="5dp"/>
+    
+    <LinearLayout 
+        android:id="@+id/theme"
+        android:layout_below="@id/text"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_alignParentBottom="true">
+        
+        <Button 
+            android:id="@+id/button_theme_simple"
+            android:layout_weight = "1"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:text="@string/theme_simple"
+            android:onClick="changeToSimpleTheme"/>
+            
+        <Button 
+            android:id="@+id/button_theme_color"
+            android:layout_weight = "1"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:text="@string/theme_color"
+            android:onClick="changeToColorfulTheme"/>
+        
+    </LinearLayout>
+</RelativeLayout>
